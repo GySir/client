@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying'
-                bat 'mvn clean deploy -DaltDeploymentRepository=internal.repo::default::file:///home/client/jar'  // 此处调用脚本或者ansible、saltstak，部署到远程
+                bat 'mvn clean deploy -DaltDeploymentRepository=internal.repo::default::file:///home/client'  // 此处调用脚本或者ansible、saltstak，部署到远程
             }
         }
        
